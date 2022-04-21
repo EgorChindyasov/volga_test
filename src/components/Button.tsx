@@ -25,24 +25,8 @@ const ButtonStyled = styled.div`
 const Button: FC<ButtonType> = (props) => {
     const {className, onClick, active} = props
 
-    const onMouseOver = (event: React.MouseEvent) => {
-        if (!active) {
-            event.target.style.color = 'white'
-            event.target.style.background = '#3a8839'
-        }
-    }
-
-    const onMouseLeave = (event: React.MouseEvent) => {
-        if (!active) {
-            event.target.style.color = '#3a8839'
-            event.target.style.background = 'white'
-        }
-    }
-
     return (
         <ButtonStyled
-            onMouseOver={onMouseOver} 
-            onMouseLeave={onMouseLeave}
             className={className}
             onClick={onClick} 
             active={active}>
